@@ -70,7 +70,7 @@ console.log(obj.IIFEArrow) */
 // };
 
 // user.greet(); // undefined
-
+// bcz - setTimeout run on client side so refer window object but in window this.name is not defined
 
 
 const user = {
@@ -82,4 +82,6 @@ const user = {
   }
 };
 
-user.greet(); // undefined
+user.greet(); // Alex
+
+// bcz - arrow function doesn't have own this so it refer it's parent function as this in greet() that refer name ="alex"
