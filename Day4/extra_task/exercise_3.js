@@ -1,26 +1,41 @@
-// Write mergeConfig(defaultConfig, envConfig) that:
-// Returns a new object
-// envConfig overrides defaultConfig
-// Original objects remain unchanged
-
-/* const defaultConfig = {
-  timeout: 5000,
-  retry: 3
-};
-
-const envConfig = {
-  retry: 5
-}; */
+// Balance must not be directly modified outside the class
+// withdraw should not allow negative balance
+// Return the updated balance after each operation
 
 
-const obj1 = {
-  a: 1,
-  b: { x: 10 }
-};
+class BankAccount {
+  #balance; // private field - in JS there is not any private keyword.
 
-const obj2 = { ...obj1,b:{...obj1.b,x:99}};
+  constructor(owner, balance) {
+    this.owner = owner;
+    this.#balance = balance;
+  }
 
-// obj2.b.x = 99;
+  deposit(amount) {
+    if (amount <= 0) return this.#balance;
+    this.#balance += amount;
+    return this.#balance;
+  }
 
-console.log(obj1.b.x);
-console.log(obj2.b.x);
+  withdraw(amount) {
+    if (amount > this.#balance) {
+      console.log("Insufficient balance");
+      return this.#balance;
+    }
+    this.#balance -= amount;
+    return this.#balance;
+  }
+
+  get balance() {
+    return this.#balance;
+  }
+}
+
+
+const a1 = new BankAccount("Ram", 1000);
+
+account1.deposit(500);
+console.log(account1.balance); 
+
+account1.withdraw(300);
+console.log(account1.balance); 
