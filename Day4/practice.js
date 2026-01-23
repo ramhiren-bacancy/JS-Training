@@ -8,7 +8,7 @@ Uses LIFO
 Stored in Stack
     number, string, boolean, null, undefined, symbol, bigint    
     Function execution contexts
-    References (addresses) to heap object
+    References/Varible (addresses) to heap object
 */
 
 //Heap Memrory
@@ -40,8 +40,8 @@ user2.name = "Bob";
 // Shallow Copy:
 //  refer same obj in heap
 //  spared is shallow copy
-// changes - if properties is primitive No change -stack
-//           if properties is Non-primitive Chnage -heap
+// changes - if properties is primitive No change in original obj - stack
+//           if properties is Non-primitive Chnage in original obj -heap
 
 // deep copy:
 // The new object and the original object have absolutely no shared references, meaning changes in one will never affect the other.
