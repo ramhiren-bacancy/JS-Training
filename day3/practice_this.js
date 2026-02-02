@@ -20,11 +20,11 @@ z()
 
 function x(){
     var a =20
-    console.log(this.a); //10
+    console.log(this.a); //10 --> undefined
 }
 
 function y(){
-    console.log(this.a); //10
+    console.log(this.a); //10 --> undefined
     
 }
 const z = ()=>{ // refereance error : z can't access before initialization - arrow function

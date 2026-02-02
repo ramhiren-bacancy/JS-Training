@@ -232,10 +232,10 @@ Shadowing with let,var and const
         console.log(a); // 5
 
 
-        var a = 5;
+        let a = 5;
 
         {
-                let a = 10;   //Identifier 'a' has already been declared
+                var a = 10;   //Identifier 'a' has already been declared
                 console.log(a); 
         }
 

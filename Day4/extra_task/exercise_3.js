@@ -34,8 +34,8 @@ class BankAccount {
 
 const a1 = new BankAccount("Ram", 1000);
 
-account1.deposit(500);
-console.log(account1.balance); 
+a1.deposit(500);
+console.log(a1.balance); 
 
-account1.withdraw(300);
-console.log(account1.balance); 
+a1.withdraw(300);
+console.log(a1.balance);
