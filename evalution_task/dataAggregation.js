@@ -36,6 +36,16 @@ async function apiCalling(url){
    
 }
 
+// function fetchUser(){
+//   userPromise = new Promise((resolve,reject)=>{
+//       setTimeout(()=>{
+//         resolve({username : "Hiren"})
+//       },1000)
+//   })
+//   return userPromise
+// }
+
+
 async function getInfo(){
       // const userPromise = apiCalling('www.google.com')
       // const postPromise = apiCalling('www.google.com')
