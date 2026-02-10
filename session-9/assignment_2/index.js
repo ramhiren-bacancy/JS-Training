@@ -9,10 +9,13 @@ function sum(arr) {
 console.log(sum(arr));
 // Question 2
 function another(a, b) {
+    console.log(a+b);
     if (a + b > 100) {
         return "Sum is greate than 100";
     }
     return a + b;
 }
-console.log(another(10, 102));
-// 
+console.log(another("1", 2));
+// what happend if you pass a string?
+// it's run successfully also reflect js file also.  But warning msg show in console.
+// error :index.ts:22:21 - error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.

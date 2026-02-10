@@ -19,7 +19,7 @@ function another(a:number,b:number):string|number{
         return a+b
 }
 
-console.log(another(10,102))
+console.log(another("1",2))
 
 // what happend if you pass a string?
 // it's run successfully also reflect js file also.  But warning msg show in console.
