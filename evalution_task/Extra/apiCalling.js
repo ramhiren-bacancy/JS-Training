@@ -16,7 +16,7 @@ Then:
 - Handle the asynchronous behavior correctly.
 */
 
-function MakeApiCall(data,status = true,delay = 1000){
+function makeApiCall(data,status = true,delay = 1000){
     return new Promise((resolve,reject)=>{
         setTimeout(()=>{
             if(status){

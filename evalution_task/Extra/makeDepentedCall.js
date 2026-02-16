@@ -72,11 +72,11 @@ async function fetchInfo(url) {
 async function getData(url) {
   try {
     //! Task 1
-    userData = await fetchInfo(url + "users/1");
-    let { id } = userData;
+    const userData = await fetchInfo(url + "users/1");
+    const { id } = userData;
     if(!userData) throw new Error("User Not Found")
 
-    postData = await fetchInfo(url + `posts?userId=${id}`);
+    const postData = await fetchInfo(url + `posts?userId=${id}`);
     if(!postData || postData.length==0) throw new Error("Post Not Found")
     let postId = postData[1].id
 
