@@ -1,3 +1,10 @@
+// Create a function updateField that takes:
+// object
+// key
+// value
+// Ensure the value type matches the key type.
+// Try assigning wrong type and observe the error.
+
 interface User{
     id:number,
     name : string,
